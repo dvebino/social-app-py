@@ -5,6 +5,8 @@ from datetime import datetime
 
 # Create your models here.
 
+User = get_user_model()
+
 class Profile(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     id_user = models.IntegerField()
