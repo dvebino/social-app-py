@@ -45,30 +45,31 @@
                     </div>
                     <div class="bg-white rounded-md lg:shadow-lg shadow col-span-2">
                        
-                       
-                        <div class="grid grid-cols-2 gap-3 lg:p-6 p-4">
-                            <div class="col-span-2">
-                                <label for="about">Profile Image</label>  
-                                <input type="file" name="image" placeholder="" class="shadow-none bg-gray-100">
+                        <form action="" method="POST">
+                            {% csrf_token %}
+                            <div class="grid grid-cols-2 gap-3 lg:p-6 p-4">
+                                <div class="col-span-2">
+                                    <label for="about">Profile Image</label>  
+                                    <input type="file" name="image" placeholder="" class="shadow-none bg-gray-100">
+                                </div> 
+                                <div class="col-span-2">
+                                    <label for="about">Bio</label>  
+                                    <textarea id="about" name="bio" rows="3"  class="shadow-none bg-gray-100"></textarea>
+                                </div> 
+                                <div class="col-span-2">
+                                    <label for=""> Location</label>
+                                    <input type="text" name="location" placeholder="" class="shadow-none bg-gray-100">
+                                </div>
                             </div> 
-                            <div class="col-span-2">
-                                <label for="about">Bio</label>  
-                                <textarea id="about" name="bio" rows="3"  class="shadow-none bg-gray-100"></textarea>
-                            </div> 
-                            <div class="col-span-2">
-                                <label for=""> Location</label>
-                                <input type="text" name="location" placeholder="" class="shadow-none bg-gray-100">
+        
+                            <div class="bg-gray-10 p-6 pt-0 flex justify-end space-x-3">
+                                <button class="p-2 px-4 rounded bg-gray-50 text-red-500"><a href="/"> Cancel </button>
+                                <button type="submit" class="button bg-blue-700"> Save </button>
                             </div>
-                       </div> 
-    
-                       <div class="bg-gray-10 p-6 pt-0 flex justify-end space-x-3">
-                           <button class="p-2 px-4 rounded bg-gray-50 text-red-500"> Cancel </button>
-                           <button type="button" class="button bg-blue-700"> Save </button>
-                       </div>
-    
+                        </form>
                     </div>
 
-                    <div>
+                    {% comment %} <div>
                         <h3 class="text-xl mb-2"> Privacy</h3>
                         <p> </p>
                     </div>
@@ -104,7 +105,7 @@
                                 <h4> Search engines?</h4>
                                 <div>  </div>
                             </div>
-                            <div class="switches-list -mt-8 is-large">
+                            <div class="switches-list -mt-8 is-large"> 
                                 <div class="switch-container">
                                     <label class="switch"><input type="checkbox"><span class="switch-button"></span> </label>
                                 </div>
@@ -124,7 +125,7 @@
                         </div>
                     </div>
     
-                    </div>
+                    </div> {% endcomment %}
                     <br>
 
                 </div>
