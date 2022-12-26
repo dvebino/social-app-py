@@ -25,7 +25,7 @@
 
             <div class="container m-auto"> 
 
-                <h1 class="text-2xl leading-none text-gray-900 tracking-tight mt-3"> Account Setting </h1>
+                <h1 class="text-2xl leading-none text-gray-900 tracking-tight mt-3"><a href="/">Home</a> <b>|</b> Account Setting <b>|</b> <b>{{user.username}}</b> </h1>
                 <ul class="mt-5 -mr-3 flex-nowrap lg:overflow-hidden overflow-x-scroll uk-tab">
                     <li class="uk-active"><a href="#">General</a></li>
                     <li><a href="#">Profile</a></li>
@@ -35,6 +35,8 @@
                     <li><a href="#">Billing</a></li>
                     <li><a href="#">Security</a></li>
                 </ul>
+                
+                <hr/>
 
                 <div class="grid lg:grid-cols-3 mt-12 gap-8">
                     <div>
@@ -42,41 +44,20 @@
                         <p></p>
                     </div>
                     <div class="bg-white rounded-md lg:shadow-lg shadow col-span-2">
-    
-                       <div class="grid grid-cols-2 gap-3 lg:p-6 p-4">
-                           <div>
-                               <label for=""> First name</label>
-                               <input type="text" placeholder="Your name.." class="shadow-none bg-gray-100">
-                           </div>
-                           <div>
-                               <label for=""> Last name</label>
-                               <input type="text" placeholder="Your name.." class="shadow-none bg-gray-100">
-                            </div>
+                       
+                       
+                        <div class="grid grid-cols-2 gap-3 lg:p-6 p-4">
                             <div class="col-span-2">
-                                <label for=""> Email</label>
-                                <input type="text" placeholder="Your name.." class="shadow-none bg-gray-100">
-                            </div>
+                                <label for="about">Profile Image</label>  
+                                <input type="file" name="image" placeholder="" class="shadow-none bg-gray-100">
+                            </div> 
                             <div class="col-span-2">
-                                <label for="about">About me</label>  
-                                <textarea id="about" name="about" rows="3"  class="shadow-none bg-gray-100"></textarea>
+                                <label for="about">Bio</label>  
+                                <textarea id="about" name="bio" rows="3"  class="shadow-none bg-gray-100"></textarea>
                             </div> 
                             <div class="col-span-2">
                                 <label for=""> Location</label>
-                                <input type="text" placeholder="" class="shadow-none bg-gray-100">
-                            </div>
-                            <div>
-                               <label for=""> Working at</label>
-                               <input type="text" placeholder="" class="shadow-none bg-gray-100">
-                            </div> 
-                            <div>
-                               <label for=""> Relationship </label>
-                               <select id="relationship" name="relationship"  class="shadow-none bg-gray-100">
-                                <option value="0">None</option>
-                                <option value="1">Single</option>
-                                <option value="2">In a relationship</option>
-                                <option value="3">Married</option>
-                                <option value="4">Engaged</option>
-                              </select>
+                                <input type="text" name="location" placeholder="" class="shadow-none bg-gray-100">
                             </div>
                        </div> 
     
