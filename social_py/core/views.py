@@ -6,6 +6,12 @@ from .models import Profile
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 
+@login_required(login_url='signin')
+def index(request):
+    user_object = User.objects.get(username = request.user.username)
+    user_profile = Profile.objects.get(user = user_object)
+
+    return render(request, 'index.html', {'user_profile': user_profile})
 
 @login_required(login_url='signin')
 def settings(request):
@@ -35,8 +41,8 @@ def settings(request):
     return render(request, 'setting.html', {'user_profile' : user_profile})
 
 @login_required(login_url='signin')
-def index(request):
-    return render(request, 'index.html')
+def upload(request):
+    return HttpResponse('<h1> Hello World </h1>')
 
 def signup(request):
 
