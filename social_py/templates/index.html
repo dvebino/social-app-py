@@ -73,6 +73,7 @@
                                     </div>
 
                                     <form action="upload" method="POST" enctype="multipart/form-data">
+                                        {% csrf_token %}
                                         <p class="my-3 leading-6 align-center"> Upload Picture Here
                                         </p>
                                         <div>
