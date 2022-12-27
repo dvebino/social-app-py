@@ -12,8 +12,9 @@ def index(request):
     user_profile = Profile.objects.get(user = user_object)
 
     
+    feed_posts = Post.objects.all()
 
-    return render(request, 'index.html', {'user_profile': user_profile})
+    return render(request, 'index.html', {'user_profile': user_profile, 'posts': feed_posts})
 
 @login_required(login_url='signin')
 def settings(request):
