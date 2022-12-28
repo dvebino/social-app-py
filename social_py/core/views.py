@@ -11,7 +11,6 @@ def index(request):
     user_object = User.objects.get(username = request.user.username)
     user_profile = Profile.objects.get(user = user_object)
 
-    
     feed_posts = Post.objects.all()
 
     return render(request, 'index.html', {'user_profile': user_profile, 'posts': feed_posts})
@@ -38,7 +37,7 @@ def like_post(request):
         return redirect('/')
 
 def profile(request,pk):
-    user_object = User.objects.get(username = pk)
+    user_object = User.objects.get(username=pk)
     user_profile = Profile.objects.get(user=user_object)
     user_posts = Post.objects.filter(user=pk)
     user_post_length = len(user_posts)
@@ -46,11 +45,10 @@ def profile(request,pk):
     context = {
         'user_object': user_object,
         'user_profile': user_profile,
-        'user_posts':user_posts,
-        'user_post_length': user_post_length
+        'user_posts': user_posts,
+        'user_post_length': user_post_length,
     }    
-
-    return render(request,  'profile.html')
+    return render(request, 'profile.html', context)
 
 @login_required(login_url='signin')
 def settings(request):
