@@ -29,6 +29,15 @@
 				<figure><img src="{% static 'images/resources/timeline-1.jpg' %}" alt=""></figure>
 				<form>
 					<div class="add-btn">
+					
+					{% if user_post_length == 0 %}
+					<span style="color:white; font-size: 27px"><b>No Post </b></span>
+					{% elif user_post_length == 1 %}
+					<span style="color:white; font-size:27px"><b>{{user_post_length}}</b></span>
+					{% else %}
+					<span style="color:white; font-size: 27px"><b>{{user_post_length}}</b></span>
+					{% endif%}
+					
 					<span style="color: white; font-size: 27px; margin-right: 520px;"><b><u><a href="/">Home</a></u></b></span>
 					<span style="color: white; font-size: 27px;"><b>11 Post</b></span>
 					<span style="color: white; font-size: 27px;"><b>1.7m followers</b></span>
@@ -92,7 +101,7 @@
 		</section><!-- top area -->
 		<section>
 			<div class="bio">
-				Bio goes here...
+				{{user_profile.bio}}
 			</div>
 		</section>
 		
