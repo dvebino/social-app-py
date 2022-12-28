@@ -29,17 +29,16 @@
 				<figure><img src="{% static 'images/resources/timeline-1.jpg' %}" alt=""></figure>
 				<form>
 					<div class="add-btn">
-					
-					{% if user_post_length == 0 %}
-					<span style="color:white; font-size: 27px"><b>No Post </b></span>
-					{% elif user_post_length == 1 %}
-					<span style="color:white; font-size:27px"><b>{{user_post_length}}</b></span>
-					{% else %}
-					<span style="color:white; font-size: 27px"><b>{{user_post_length}}</b></span>
-					{% endif%}
-					
 					<span style="color: white; font-size: 27px; margin-right: 520px;"><b><u><a href="/">Home</a></u></b></span>
-					<span style="color: white; font-size: 27px;"><b>11 Post</b></span>
+
+					{% if user_post_length == 0 %}
+					<span style="color: white; font-size: 27px"><b>No Post </b></span>
+					{% elif user_post_length == 1 %}
+					<span style="color: white; font-size:27px"><b>{{user_post_length}} Post</b></span>
+					{% else %}
+					<span style="color: white; font-size: 27px"><b>{{user_post_length}} Posts</b></span>
+					{% endif%}
+
 					<span style="color: white; font-size: 27px;"><b>1.7m followers</b></span>
 					<span style="color: white; font-size: 27px;"><b>3.5k following</b></span>
 					<a href="" title="" data-ripple=""><button style="background-color: #ffc0cb; border: #ffc0cb;">Follow</button></a>
