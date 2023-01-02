@@ -45,7 +45,12 @@
 
 					<input type="hidden" value={{user.username}} name="follower" />
 					<input type="hidden" value={{user_object.username}} name="user" />
-
+					
+					{% if user_object.username == user.username %}
+					<a href="/settings" data-ripple="">Account Settings</a>
+					{% else %}
+					<a title="" data-ripple=""><button type="submit" style="background-color: #ffc0cb; border: #ffc0cb;">Unfollow</button></a>
+					{% endif %}
 					<a title="" data-ripple=""><button type="submit" style="background-color: #ffc0cb; border: #ffc0cb;">Follow</button></a>
 					</div>
 				</form>
