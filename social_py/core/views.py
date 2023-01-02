@@ -49,6 +49,10 @@ def profile(request,pk):
         'user_post_length': user_post_length,
     }    
     return render(request, 'profile.html', context)
+ 
+@login_required(login_url='signin')
+def follow(request):
+    pass
 
 @login_required(login_url='signin')
 def settings(request):
